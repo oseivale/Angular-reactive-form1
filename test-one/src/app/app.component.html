@@ -1,11 +1,16 @@
 
-  <input type="text" class="form-control col-md-4" placeholder="Enter username" [(ngModel)]="userName">
-  <button (click)="search(userName)" class="btn btn-info col-md-4">Search</button>
+  <h4>Search for your favorite coder!</h4>
+  <div class="container">
+    <input type="text" class="form-control col-md-4" placeholder="Enter username" [(ngModel)]="userName">
+    <button (click)="search(userName)" class="btn btn-info col-md-4">Search</button>
+  </div>
+ 
 
-  <div *ngIf="response">
+  <div *ngIf="response" class="info">
     <p>Login: {{response.login}}</p>
     <p>User ID: {{response.id}}</p>
-    <p>GitHub URL: <a href="{{response.html_url}}">Check out their github here!</a></p>
+    <p>GitHub URL: <a href="{{response.html_url}}" >Check out {{response.name+'\'s'}} github here!</a></p>
     <p>Type of user: {{response.type}}</p>
+    <p>{{response.bio}}</p>
     <img src="{{response.avatar_url}}" class="rounded mx-auto d-block" alt="">
   </div>

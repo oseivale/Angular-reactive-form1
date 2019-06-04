@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-p{
+p, h4{
     font-family: 'Quicksand', sans-serif;
+}
+
+.form-control, .btn{
+   margin-left: 230px; 
+   margin-top: 20px;
+}
+
+h4, p{
+    text-align: center;
+}
+
+.info{
+    margin-top: 20px;
 }
