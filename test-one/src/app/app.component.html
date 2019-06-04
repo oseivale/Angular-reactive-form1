@@ -1,0 +1,11 @@
+
+  <input type="text" class="form-control col-md-4" placeholder="Enter username" [(ngModel)]="userName">
+  <button (click)="search(userName)" class="btn btn-info col-md-4">Search</button>
+
+  <div *ngIf="response">
+    <p>Login: {{response.login}}</p>
+    <p>User ID: {{response.id}}</p>
+    <p>GitHub URL: <a href="{{response.html_url}}">Check out their github here!</a></p>
+    <p>Type of user: {{response.type}}</p>
+    <img src="{{response.avatar_url}}" class="rounded mx-auto d-block" alt="">
+  </div>
